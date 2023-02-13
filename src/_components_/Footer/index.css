@@ -1,0 +1,37 @@
+.footer {
+    padding-top: 20px;
+}
+
+/* Information */
+.footer-title {
+    left: 10px;
+}
+
+.footer .footer-container {
+    width: 1200px;
+    padding-bottom: 30px;
+}
+
+.footer-container {
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-container .info-1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Copy Right */
+.copyright {
+    height: 40px;
+    background-color: #66ccff;
+    padding: 10px;
+    text-align: center;
+}

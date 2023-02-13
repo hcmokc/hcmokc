@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// React Router Dom
+import { Routes, Route } from "react-router-dom";
 
-export default App;
+// User Template
+import HomeTemplate from "./_pages_/HomeTemplate";
+
+// Admin Template
+// import AdminTemplate from './_pages_/AdminTemplate';
+
+// Page Not Found
+// import PageNotFound from './_pages_/PageNotFound';
+
+export default class App extends Component {
+  render() {
+    return (
+      <Routes>
+        {/* Home Template */}
+        <Route exact path="/" element={<HomeTemplate />}></Route>
+        
+        {/* Admin Template */}
+        {/* <AdminProtectedRoute exact path="/admin" component={AdminTemplate} /> */}
+        {/* <Route path="admin" element={<AdminTemplate/>} /> */}
+        
+        {/* Page Not Found */}
+        {/* <Route path="" component={PageNotFound} /> */}
+      </Routes>
+    )
+  };
+};

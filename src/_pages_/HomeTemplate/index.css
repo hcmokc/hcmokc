@@ -1,0 +1,36 @@
+.button-container {
+    height: 200px;
+    position: relative;
+}
+
+.buttonToLink {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slide-container {
+    display: flex;
+}
+
+.countdown{
+    border: 3px solid rgb(238, 0, 255);
+}
+
+.introduction{
+    border: 3px solid blue;
+}
+
+.intro-title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.registration-form h3 , .schedule h3, .score-board h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
