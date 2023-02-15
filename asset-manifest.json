@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.756af292.css",
-    "main.js": "./static/js/main.50f3ec31.js",
+    "main.css": "./static/css/main.d76da984.css",
+    "main.js": "./static/js/main.46ebf31c.js",
     "static/js/787.5dc16573.chunk.js": "./static/js/787.5dc16573.chunk.js",
-    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/event_page_cover.png": "./static/media/event_page_cover.4fcb6fb4942dc12394dc.png",
+    "static/media/poster.png": "./static/media/poster.e0c841ce8b5d4d87b256.png",
+    "static/media/registration_form.png": "./static/media/registration_form.f9d6a4f66d071e665e9c.png",
     "index.html": "./index.html",
-    "main.756af292.css.map": "./static/css/main.756af292.css.map",
-    "main.50f3ec31.js.map": "./static/js/main.50f3ec31.js.map",
+    "main.d76da984.css.map": "./static/css/main.d76da984.css.map",
+    "main.46ebf31c.js.map": "./static/js/main.46ebf31c.js.map",
     "787.5dc16573.chunk.js.map": "./static/js/787.5dc16573.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.756af292.css",
-    "static/js/main.50f3ec31.js"
+    "static/css/main.d76da984.css",
+    "static/js/main.46ebf31c.js"
   ]
 }
