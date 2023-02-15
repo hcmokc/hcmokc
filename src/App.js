@@ -19,6 +19,9 @@ export default class App extends Component {
       <Routes>
         {/* Home Template */}
         <Route exact path="/" element={<HomeTemplate />}></Route>
+
+        {/* Every Match Template*/}
+        {/* <Route path="/score-board" element={}></Route> */}
         
         {/* Admin Template */}
         {/* <AdminProtectedRoute exact path="/admin" component={AdminTemplate} /> */}

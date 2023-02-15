@@ -1,9 +1,32 @@
 .registration-form {
-    background-image: url('../../_pictures_/registration_form.png');
-    height: 500px;
+    height: 400px;
+    width: 100%;
+    /* padding-top: 20px; */
+    display: inline-block;
+}
+
+.registration-background {
+    background-color: #e6e2d3;
+    height: inherit;
+    width: inherit;
+    background-image: url("../../_pictures_/registration_form.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
     position: relative;
+}
+
+.button-registration{
+    background-color: #e6e2d3;
+}
+
+.buttonToLink {
     width: 100%;
+    text-align: center;
+    position: relative;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

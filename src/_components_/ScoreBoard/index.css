@@ -1,4 +1,7 @@
 .score-board {
-    background-color: #99ff99;
     height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: #82b74b; */
+    background-color: #b5e7a0;
 }

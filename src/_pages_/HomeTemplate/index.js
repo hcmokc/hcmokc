@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useRef, useState } from 'react';
 
 // Import Components
 import Countdown from '../../_components_/Countdown';
@@ -15,12 +15,24 @@ import registration_form from '../../_pictures_/registration_form.png';
 
 // Import Swiper React Components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
 
-// Import Swiper styles
+// Import Swiper Styles
+import "swiper/css";
+import "swiper/css/pagination";
 import 'swiper/css';
 
 // Import Pages
 import '../HomeTemplate/index.css';
+
+function SwiperAuto() {
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty('--progress', 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
+}
 
 export default class HomeTemplate extends Component {
     render() {
@@ -34,16 +46,16 @@ export default class HomeTemplate extends Component {
                 {/* Carousel Slide */}
                 <div className="carousel-slide">
                     <div className="slide-container">
-                        <Swiper className='swiper'
-                            // spaceBetween={50}
-                            // slidesPerView={1}
-                            // onSlideChange={() => console.log('slide change')}
-                            // onSwiper={(swiper) => console.log(swiper)}
-                            autoHeight={true}
+                        <Swiper className='swiper-container'
+                            // direction={"vertical"}
+                            pagination={true}
+                            modules={[Pagination]}
+                            spaceBetween={30}
+                            loop={true}
                         >
-                            <SwiperSlide className=""><img className="" src={event_cover} alt="Event Cover"></img></SwiperSlide>
-                            <SwiperSlide><img className="" src={poster} alt="Poster"></img></SwiperSlide>
-                            <SwiperSlide><img className="" src={registration_form} alt="Poster"></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={event_cover} alt="Event Cover"></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={poster} alt="Poster"></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={registration_form} alt="Poster"></img></SwiperSlide>
                         </Swiper>
                     </div>
                 </div>
@@ -57,12 +69,14 @@ export default class HomeTemplate extends Component {
 
                 {/* Introduction */}
                 <div className="introduction">
-                    <h3 className="intro-title">Introduction</h3>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci nulla repellat obcaecati blanditiis veniam sint eligendi, et commodi deleniti tempore nam sequi officiis cupiditate repudiandae quae tempora aspernatur nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, delectus deserunt! Suscipit iure, accusantium nostrum quod provident vero dolores! Laudantium odio vitae veniam minima? Quas harum velit quasi dolor facilis?
-                        Illo harum nemo laboriosam totam natus quia accusantium? Eligendi voluptate tempora tempore distinctio ratione accusamus laborum culpa placeat porro, veritatis aliquam sed numquam nesciunt, ullam maxime mollitia quia accusantium harum.
-                        Ut, repudiandae suscipit accusantium voluptates fugiat totam ab placeat rerum magnam nemo odio earum ad nostrum nulla, error dolores. Quibusdam, consectetur qui! Necessitatibus esse minima mollitia, voluptatibus saepe perspiciatis sed?
-                        Id architecto perferendis, blanditiis distinctio doloremque delectus, at minima natus maxime vitae voluptates obcaecati quis dolorum officiis ipsa similique veritatis officia fugit iure. Quae nesciunt eum fuga. Dicta, nostrum quos?
-                        Dignissimos sequi aut nam eius, deserunt dolor magnam maxime illo perspiciatis? Minus, dolorem mollitia alias veritatis, ea placeat cum, vel natus atque fugit id quos maiores pariatur impedit nulla rem.</div>
+                    <div className='introduction-container'>
+                        <h3 className="intro-title">Introduction</h3>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci nulla repellat obcaecati blanditiis veniam sint eligendi, et commodi deleniti tempore nam sequi officiis cupiditate repudiandae quae tempora aspernatur nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, delectus deserunt! Suscipit iure, accusantium nostrum quod provident vero dolores! Laudantium odio vitae veniam minima? Quas harum velit quasi dolor facilis?
+                            Illo harum nemo laboriosam totam natus quia accusantium? Eligendi voluptate tempora tempore distinctio ratione accusamus laborum culpa placeat porro, veritatis aliquam sed numquam nesciunt, ullam maxime mollitia quia accusantium harum.
+                            Ut, repudiandae suscipit accusantium voluptates fugiat totam ab placeat rerum magnam nemo odio earum ad nostrum nulla, error dolores. Quibusdam, consectetur qui! Necessitatibus esse minima mollitia, voluptatibus saepe perspiciatis sed?
+                            Id architecto perferendis, blanditiis distinctio doloremque delectus, at minima natus maxime vitae voluptates obcaecati quis dolorum officiis ipsa similique veritatis officia fugit iure. Quae nesciunt eum fuga. Dicta, nostrum quos?
+                            Dignissimos sequi aut nam eius, deserunt dolor magnam maxime illo perspiciatis? Minus, dolorem mollitia alias veritatis, ea placeat cum, vel natus atque fugit id quos maiores pariatur impedit nulla rem.</div>
+                    </div>
                 </div>
 
                 {/* Registration Form  */}
