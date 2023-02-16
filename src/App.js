@@ -18,7 +18,7 @@ export default class App extends Component {
     return (
       <Routes>
         {/* Home Template */}
-        <Route exact path="/" element={<HomeTemplate />}></Route>
+        <Route exact path="" element={<HomeTemplate />}></Route>
 
         {/* Every Match Template*/}
         {/* <Route path="/score-board" element={}></Route> */}
