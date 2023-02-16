@@ -29,11 +29,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    {console.log("working normalnormal")}
-    <p>Something</p>
-    <BrowserRouter>
+    <React.BrowserRouter>
       <App />
-    </BrowserRouter>
+    </React.BrowserRouter>
   </React.StrictMode>
 );
 
