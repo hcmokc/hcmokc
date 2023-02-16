@@ -29,8 +29,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
+    {console.log("Test")}
+    <p>Test</p>
     <React.BrowserRouter>
-      <div>Test</div>
+      {console.log("Test")}
+      <p>Test</p>
       <App />
     </React.BrowserRouter>
   </React.StrictMode>
