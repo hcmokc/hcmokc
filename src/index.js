@@ -28,13 +28,13 @@ import axios from "axios";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <StrictMode>
+  <React.StrictMode>
     {console.log("working normalnormal")}
     <p>Something</p>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
