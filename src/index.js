@@ -11,7 +11,7 @@ import "@popperjs/core/dist/umd/popper.min.js"
 import "bootstrap/dist/js/bootstrap.min.js";
 
 // React Router Dom
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 // Axios
 import axios from "axios";
@@ -29,9 +29,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
