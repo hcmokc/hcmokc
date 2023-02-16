@@ -30,6 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <React.BrowserRouter>
+      <div>Test</div>
       <App />
     </React.BrowserRouter>
   </React.StrictMode>
