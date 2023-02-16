@@ -31,11 +31,11 @@ root.render(
   <React.StrictMode>
     {console.log("Test")}
     <p>Test</p>
-    <React.BrowserRouter>
+    <BrowserRouter>
       {console.log("Test")}
       <p>Test</p>
       <App />
-    </React.BrowserRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
