@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.56bb42de.css",
-    "main.js": "./static/js/main.96ba6c82.js",
+    "main.js": "./static/js/main.0fbde1db.js",
     "static/js/787.5dc16573.chunk.js": "./static/js/787.5dc16573.chunk.js",
     "static/media/event_page_cover.png": "./static/media/event_page_cover.4fcb6fb4942dc12394dc.png",
     "static/media/poster.png": "./static/media/poster.e0c841ce8b5d4d87b256.png",
@@ -9,11 +9,11 @@
     "static/media/logo_club.jpg": "./static/media/logo_club.18564b19215a8164c5fa.jpg",
     "index.html": "./index.html",
     "main.56bb42de.css.map": "./static/css/main.56bb42de.css.map",
-    "main.96ba6c82.js.map": "./static/js/main.96ba6c82.js.map",
+    "main.0fbde1db.js.map": "./static/js/main.0fbde1db.js.map",
     "787.5dc16573.chunk.js.map": "./static/js/787.5dc16573.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56bb42de.css",
-    "static/js/main.96ba6c82.js"
+    "static/js/main.0fbde1db.js"
   ]
 }
