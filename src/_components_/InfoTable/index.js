@@ -13,6 +13,9 @@ import Box from '@mui/material/Box';
 // Import Components
 import IndividualTable from '../IndividualTable';
 
+// Import CSS
+import '../InfoTable/index.css';
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -79,15 +82,23 @@ export default function FullWidthTabs() {
                 onChangeIndex={handleChangeIndex}
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                    <h3>Single Female Category</h3>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Single Female Category</h3>
+                    </div>
                     <IndividualTable />
-                    <h3>Single Male Category</h3>
+                    <div className='category-container pt-5'>
+                        <h3 className='title-category'>Single Male Category</h3>
+                    </div>
                     <IndividualTable />
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    <h3>Team Female Category</h3>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Team Female Category</h3>
+                    </div>
                     <IndividualTable />
-                    <h3>Team Male Category</h3>
+                    <div className='category-container pt-5 '>
+                        <h3 className='title-category'>Team Female Category</h3>
+                    </div>
                     <IndividualTable />
                 </TabPanel>
             </SwipeableViews>
