@@ -1,44 +1,79 @@
 import React from 'react'
+import { useState, useEffect } from "react";
 
 // Import CSS
-import '../HomeTemplate/index.css';
+import '../MatchTemplate/index.css';
 
 // Import Components
 import Sidebar from '../../_components_/Sidebar';
 import Footer from '../../_components_/Footer';
+import InfoTable from '../../_components_/InfoTable';
+
+// Import Material UI Components
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Unstable_Grid2';
 
 // Import Bracket
 import { SingleEliminationBracket, DoubleEliminationBracket, Match, MATCH_STATES, SVGViewer } from '@g-loot/react-tournament-brackets';
 
-const matches = [
-    {
-        "id": 260005,
-        "name": "Final - Match",
-        "nextMatchId": null, // Id for the nextMatch in the bracket, if it's final match it must be null OR undefined
-        "tournamentRoundText": "4", // Text for Round Header
-        "startTime": "2021-05-30",
-        "state": "DONE", // 'NO_SHOW' | 'WALK_OVER' | 'NO_PARTY' | 'DONE' | 'SCORE_DONE' Only needed to decide walkovers and if teamNames are TBD (to be decided)
-        "participants": [
-            {
-                "id": "c016cb2a-fdd9-4c40-a81f-0cc6bdf4b9cc", // Unique identifier of any kind
-                "resultText": "WON", // Any string works
-                "isWinner": false,
-                "status": null, // 'PLAYED' | 'NO_SHOW' | 'WALK_OVER' | 'NO_PARTY' | null
-                "name": "giacomo123"
-            },
-            {
-                "id": "9ea9ce1a-4794-4553-856c-9a3620c0531b",
-                "resultText": null,
-                "isWinner": true,
-                "status": null, // 'PLAYED' | 'NO_SHOW' | 'WALK_OVER' | 'NO_PARTY'
-                "name": "Ant"
-            }
-        ]
-    }
-]
+// Hook
+function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
+    useEffect(() => {
+        // Handler to call on window resize
+        function handleResize() {
+            // Set window width/height to state
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+        // Remove event listener on cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+}
 
-// const DoubleElimination = () => (
-//     <DoubleEliminationBracket
+const DoubleElimination = () => (
+    <DoubleEliminationBracket
+        //   matches={matches}
+        matchComponent={Match}
+        svgWrapper={({ children, ...props }) => (
+            <SVGViewer width={500} height={500} {...props}>
+                {children}
+            </SVGViewer>
+        )}
+    />
+);
+
+// const DoubleElimination = () => {
+//     const [width, height] = useWindowSize();
+//     const finalWidth = Math.max(width - 50, 500);
+//     const finalHeight = Math.max(height - 100, 500);
+//     return (
+//         <DoubleEliminationBracket
+//             matches={matches}
+//             matchComponent={Match}
+//             svgWrapper={({ children, ...props }) => (
+//                 <SVGViewer width={finalWidth} height={finalHeight} {...props}>
+//                     {children}
+//                 </SVGViewer>
+//             )}
+//         />
+//     );
+// };
+
+// const SingleElimination = () => (
+//     <SingleEliminationBracket
 //         matches={matches}
 //         matchComponent={Match}
 //         svgWrapper={({ children, ...props }) => (
@@ -49,18 +84,6 @@ const matches = [
 //     />
 // );
 
-const SingleElimination = () => (
-    <SingleEliminationBracket
-        matches={matches}
-        matchComponent={Match}
-        svgWrapper={({ children, ...props }) => (
-            <SVGViewer width={500} height={500} {...props}>
-                {children}
-            </SVGViewer>
-        )}
-    />
-);
-
 export default function index() {
 
     return (
@@ -70,9 +93,20 @@ export default function index() {
                 <Sidebar />
             </div>
 
+            {/* Table Info */}
+            <div className='table-info'>
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={2} minHeight={160}>
+                        <Grid xs display="flex" justifyContent="center" alignItems="center">
+                            <InfoTable />
+                        </Grid>
+                    </Grid>
+                </Box>
+            </div>
+
             {/* Bracket */}
             <div className='bracket'>
-                <SingleElimination />
+                {/* <DoubleElimination /> */}
             </div>
 
             {/* Footer */}

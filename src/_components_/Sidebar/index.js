@@ -17,7 +17,7 @@ export default function Sidebar() {
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
             </div>
-            <a className="logo-club" href="https://rmit-kendo-club.github.io/hcmoks/" target="_blank">Ho Chi Minh Open Kendo Championships</a>
+            <a className="logo-club" href="https://hcmokc.github.io/hcmokc/" target="_blank">Ho Chi Minh Open Kendo Championships</a>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className="menu-sidebar-items" onClick={showSidebar}>
                     <li className="sidebar-toggle">

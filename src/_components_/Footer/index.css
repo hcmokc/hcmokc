@@ -1,10 +1,9 @@
 .footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    /* height: auto; */
+    clear: both;
     padding-top: 20px;
     bottom: 0;
-    /* background-color: #e6e2d3; */
 }
 
 /* Information */
@@ -13,13 +12,13 @@
 }
 
 .footer .footer-container {
-    width: 1200px;
+    /* width: 1200px; */
     padding-bottom: 30px;
 }
 
 .footer-container {
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
     position: relative;
 }
 

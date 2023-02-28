@@ -1,10 +1,14 @@
 {
-  "homepage": "https://rmit-kendo-club.github.io/rmit-kendo-club-website/#",
+  "homepage": "https://hcmokc.github.io/hcmokc/",
   "name": "rmit-kendo-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@g-loot/react-tournament-brackets": "^1.0.27",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/material": "^5.11.10",
     "@popperjs/core": "^2.11.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -18,6 +22,7 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
+    "react-swipeable-views": "^0.14.0",
     "react-tournament-bracket": "^0.2.4",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.7",
