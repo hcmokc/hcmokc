@@ -83,21 +83,21 @@ export default function FullWidthTabs() {
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <div className='category-container'>
-                        <h3 className='title-category'>Single Female Category</h3>
+                        <h3 className='title-category'>Female Category (Individual)</h3>
                     </div>
                     <IndividualTable />
                     <div className='category-container pt-5'>
-                        <h3 className='title-category'>Single Male Category</h3>
+                        <h3 className='title-category'>Male Category (Individual)</h3>
                     </div>
                     <IndividualTable />
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
                     <div className='category-container'>
-                        <h3 className='title-category'>Team Female Category</h3>
+                        <h3 className='title-category'>Female Category (Team)</h3>
                     </div>
                     <IndividualTable />
                     <div className='category-container pt-5 '>
-                        <h3 className='title-category'>Team Female Category</h3>
+                        <h3 className='title-category'>Female Category (Team)</h3>
                     </div>
                     <IndividualTable />
                 </TabPanel>

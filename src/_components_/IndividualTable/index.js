@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+// Import Material UI
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -13,6 +15,9 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+// Import Components
+import MatchCollapseTable from '../../_components_/MatchCollapseTable'
 
 function createData(name, calories, fat, carbs, protein, price) {
     return {
@@ -32,7 +37,7 @@ function createData(name, calories, fat, carbs, protein, price) {
                 date: '2020-01-02',
                 customerId: 'Anonymous',
                 amount: 1,
-            }, 
+            },
             {
                 date: '2020-01-05',
                 customerId: '11091700',
@@ -72,16 +77,16 @@ function Row(props) {
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <Box sx={{ margin: 1 }}>
                             <Table size="small" aria-label="purchases">
-                                <TableHead>
+                                {/* <TableHead>
                                     <TableRow>
-                                        <TableCell>ID</TableCell>
+                                        <TableCell>Match</TableCell>
                                         <TableCell>Name</TableCell>
-                                        <TableCell align="right">Dan</TableCell>
-                                        <TableCell align="right">Total price ($)</TableCell>
+                                        <TableCell align="right">Point</TableCell>
+                                        <TableCell align="right">Point</TableCell>
                                     </TableRow>
-                                </TableHead>
+                                </TableHead> */}
                                 <TableBody>
-                                    {row.history.map((historyRow) => (
+                                    {/* {row.history.map((historyRow) => (
                                         <TableRow key={historyRow.date}>
                                             <TableCell component="th" scope="row">
                                                 {historyRow.date}
@@ -92,7 +97,10 @@ function Row(props) {
                                                 {Math.round(historyRow.amount * row.price * 100) / 100}
                                             </TableCell>
                                         </TableRow>
-                                    ))}
+                                    ))} */}
+                                    <div className='pb-4'>
+                                        <MatchCollapseTable />
+                                    </div>
                                 </TableBody>
                             </Table>
                         </Box>
@@ -134,12 +142,7 @@ export default function IndividualTable() {
             <Table aria-label="collapsible table">
                 <TableHead>
                     <TableRow>
-                        <TableCell />
-                        {/* <TableCell>Name </TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell> */}
+                        {/* <TableCell>Name</TableCell>*/}
                     </TableRow>
                 </TableHead>
                 <TableBody>

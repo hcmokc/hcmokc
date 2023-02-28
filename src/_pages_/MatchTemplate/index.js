@@ -8,6 +8,7 @@ import '../MatchTemplate/index.css';
 import Sidebar from '../../_components_/Sidebar';
 import Footer from '../../_components_/Footer';
 import InfoTable from '../../_components_/InfoTable';
+import TableTest from '../../_components_/TestTable'
 
 // Import Material UI Components
 import Box from '@mui/material/Box';
@@ -102,6 +103,10 @@ export default function index() {
                         </Grid>
                     </Grid>
                 </Box>
+            </div>
+
+            <div>
+                {/* <TableTest/> */}
             </div>
 
             {/* Bracket */}
