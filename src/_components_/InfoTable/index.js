@@ -62,17 +62,17 @@ export default function FullWidthTabs() {
     };
 
     return (
-        <Box sx={{ bgcolor: 'background.paper', width: 800 }}>
+        <Box sx={{ bgcolor: 'background.paper', width: 400 }}>
             <AppBar position="static">
                 <Tabs
                     value={value}
                     onChange={handleChange}
                     indicatorColor="secondary"
                     textColor="inherit"
-                    variant="scrollable"
-                    scrollButtons
+                    variant="scorable"
+                    scrollButtons="auto"
                     allowScrollButtonsMobile
-                    aria-label="scrollable force tabs example"
+                    aria-label="full width scrollable auto tabs example"
                 >
                     <Tab label=" Junior (Individual) " {...a11yProps(0)} />
                     <Tab label=" Female (Individual) (0-1) " {...a11yProps(1)} wrapped />

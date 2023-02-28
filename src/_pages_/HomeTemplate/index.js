@@ -9,9 +9,15 @@ import ScoreBoard from '../../_components_/ScoreBoard';
 import Footer from '../../_components_/Footer';
 
 // Import Image
-import event_cover from '../../_pictures_/event_page_cover.png'
-import poster from '../../_pictures_/poster.png'
-import registration_form from '../../_pictures_/registration_form.png';
+import schedule from '../../_pictures_/schedule.jpg';
+import schedule_2 from '../../_pictures_/schedule_2.jpg';
+import agenda from '../../_pictures_/agenda.jpg';
+import liberty_hotel from '../../_pictures_/liberty_hotel.jpg';
+import hoa_sen_uni from '../../_pictures_/hoa_sen_uni.jpg';
+import bag from '../../_pictures_/bag.jpg';
+import kote from '../../_pictures_/kote.jpg';
+import shinai from '../../_pictures_/shinai.jpg';
+import welcome from '../../_pictures_/welcome.jpg';
 
 // Import Swiper React Components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -55,9 +61,13 @@ export default class HomeTemplate extends Component {
                             spaceBetween={30}
                             loop={true}
                         >
-                            <SwiperSlide><img className="slider-img" src={event_cover} alt="Event Cover"></img></SwiperSlide>
-                            <SwiperSlide><img className="slider-img" src={poster} alt="Poster"></img></SwiperSlide>
-                            <SwiperSlide><img className="slider-img" src={registration_form} alt="Poster"></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={welcome} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={kote} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={bag} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={shinai} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={liberty_hotel} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={hoa_sen_uni} alt=""></img></SwiperSlide>
+                            <SwiperSlide><img className="slider-img" src={agenda} alt=""></img></SwiperSlide>
                         </Swiper>
                     </div>
                 </div>
@@ -83,6 +93,22 @@ export default class HomeTemplate extends Component {
 
                 {/* Registration Form  */}
                 {/* <RegistrationForm /> */}
+
+                {/* Schedule */}
+                <div className='schedule'>
+                    <div className='schedule-container'>
+                        <img className="schedule-img" src={schedule} alt="Schedule"></img>
+                    </div>
+
+                    <div className='schedule-container'>
+                        <img className="schedule-img mx-auto" src={liberty_hotel} alt="liberty_hotel"></img>
+                    </div>
+
+                    <div className='schedule-container'>
+                        <img className="schedule-img" src={schedule_2} alt="Schedule 2"></img>
+                    </div>
+                </div>
+
 
                 {/* Score Board */}
                 {/* <ScoreBoard /> */}
