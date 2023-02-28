@@ -11,27 +11,9 @@ export const itemSidebar = [
         cname:'nav-text',
     },
     {
-        title: 'Background', 
-        path: '/',
+        title: 'Tournament', 
+        path: '/match-info',
         icon: <AiIcons.AiFillPicture/>,
-        cname:'nav-text',
-    },
-    {
-        title: 'Timeline', 
-        path: '/',
-        icon: <AiIcons.AiOutlineFieldTime/>,
-        cname:'nav-text',
-    },
-    {
-        title: 'Team', 
-        path: '/',
-        icon: <IoIcons.IoMdPeople/>,
-        cname:'nav-text',
-    },
-    {
-        title: 'Report', 
-        path: '/',
-        icon: <AiIcons.AiOutlinePaperClip/>,
         cname:'nav-text',
     },
 ]

@@ -7,12 +7,15 @@ import { BsTelephoneFill } from "react-icons/bs"
 import { MdMarkEmailUnread } from 'react-icons/md'
 import { FaFacebookSquare } from 'react-icons/fa'
 
+// Import Image
+import LogoClub from '../../_pictures_/logo_club.jpg';
+
 const now = new Date();
 
 const Footer = (props) => {
     return (
         <footer className='footer'>
-            <div className='footer-container'>
+            {/* <div className='footer-container'>
                 <div className='footer-title'>
                     <h3 className='name-club'>RMIT KENDO CLUB</h3>
                 </div>
@@ -36,11 +39,12 @@ const Footer = (props) => {
                                 <FaFacebookSquare /> RMIT Saigon South Kendo Club
                             </div>
                         </a>
+                        <img className='footer-logo-club' src={LogoClub} alt="Logo Club" width='50px' height='50px'></img>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className='copyright'>
-                <small>&copy; Copyright {now.getFullYear()}, RMIT Kendo Club</small>
+                <small>&copy; Copyright {now.getFullYear()}</small>
             </div>
         </footer>
     );

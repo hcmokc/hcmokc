@@ -8,16 +8,20 @@ export default class Countdown extends Component {
         hours: undefined,
         minutes: undefined,
         seconds: undefined
-    }
+    };
 
     componentDidMount() {
         this.interval = setInterval(() => {
             const { timeTillDate, timeFormat } = this.props;
             const then = moment(timeTillDate, timeFormat);
+            console.log("Then " + then)
+
             const now = moment();
-            console.log(now)
-            const countdown = moment(then - now);
-            const days = countdown.format('DD');
+            console.log("Now " + now.format('MM DD YYYY, h:mm a'))
+
+            const countdown = moment(then - now); 
+
+            const days = countdown.format('D');
             const hours = countdown.format('HH');
             const minutes = countdown.format('mm');
             const seconds = countdown.format('ss');
@@ -34,8 +38,7 @@ export default class Countdown extends Component {
     render() {
         const { days, hours, minutes, seconds } = this.state;
 
-        // Mapping the date values to radius values
-        const daysRadius = mapNumber(days, 0, 0, 0, 360);
+        const daysRadius = mapNumber(days, 30, 0, 0, 360);
         const hoursRadius = mapNumber(hours, 24, 0, 0, 360);
         const minutesRadius = mapNumber(minutes, 60, 0, 0, 360);
         const secondsRadius = mapNumber(seconds, 60, 0, 0, 360);

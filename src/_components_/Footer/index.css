@@ -1,6 +1,10 @@
 .footer {
+    position: absolute;
+    width: 100%;
+    /* height: auto; */
     padding-top: 20px;
-    background-color: #e6e2d3;
+    bottom: 0;
+    /* background-color: #e6e2d3; */
 }
 
 /* Information */
@@ -36,6 +40,8 @@
 
 /* Copy Right */
 .copyright {
-    background-color: #c1946a;
+    background-color: #060b26;
     text-align: center;
+    color: white;
+    font-weight: 500;
 }

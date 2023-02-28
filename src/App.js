@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 
 // User Template
 import HomeTemplate from "./_pages_/HomeTemplate";
+import MatchTemplate from "./_pages_/MatchTemplate";
 
 // Admin Template
 // import AdminTemplate from './_pages_/AdminTemplate';
@@ -21,12 +22,12 @@ export default class App extends Component {
         <Route exact path="/" element={<HomeTemplate />}></Route>
 
         {/* Every Match Template*/}
-        {/* <Route path="/score-board" element={}></Route> */}
-        
+        <Route path="/match-info" element={<MatchTemplate />}></Route>
+
         {/* Admin Template */}
         {/* <AdminProtectedRoute exact path="/admin" component={AdminTemplate} /> */}
         {/* <Route path="admin" element={<AdminTemplate/>} /> */}
-        
+
         {/* Page Not Found */}
         {/* <Route path="" component={PageNotFound} /> */}
       </Routes>

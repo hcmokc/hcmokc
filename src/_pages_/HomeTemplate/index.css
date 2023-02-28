@@ -21,6 +21,7 @@
 
 /* Introduction */
 .introduction {
+   
     margin-top: 20px;
     padding: 30px 0;
     background-color: #e6e2d3;
@@ -31,7 +32,7 @@
     width: 90%;
     margin: auto;
     padding: 20px;
-    box-shadow: 10px #888888;
+    box-shadow: 8px 8px #888888;
 }
 
 /* Headline Of Each Section (Will Be Deleted After) */

@@ -48,7 +48,9 @@ export default class HomeTemplate extends Component {
                     <div className="slide-container">
                         <Swiper className='swiper-container'
                             // direction={"vertical"}
-                            pagination={true}
+                            pagination={{
+                                clickable: true,
+                            }}
                             modules={[Pagination]}
                             spaceBetween={30}
                             loop={true}
@@ -61,11 +63,11 @@ export default class HomeTemplate extends Component {
                 </div>
 
                 {/* Countdown  */}
-                <div className="countdown">
+                {/* <div className="countdown">
                     <Countdown
-                        timeTillDate="12 31 2f022, 24:00 pm"
+                        timeTillDate="02 22 2023, 4:00 pm" 
                         timeFormat="MM DD YYYY, h:mm a" />
-                </div>
+                </div> */}
 
                 {/* Introduction */}
                 <div className="introduction">
@@ -80,13 +82,10 @@ export default class HomeTemplate extends Component {
                 </div>
 
                 {/* Registration Form  */}
-                <RegistrationForm />
-
-                {/* Schedule */}
-                <Schedule />
+                {/* <RegistrationForm /> */}
 
                 {/* Score Board */}
-                <ScoreBoard />
+                {/* <ScoreBoard /> */}
 
                 {/* Footer */}
                 <Footer />
