@@ -69,11 +69,19 @@ export default function FullWidthTabs() {
                     onChange={handleChange}
                     indicatorColor="secondary"
                     textColor="inherit"
-                    variant="fullWidth"
-                    aria-label="full width tabs example"
+                    variant="scrollable"
+                    scrollButtons
+                    allowScrollButtonsMobile
+                    aria-label="scrollable force tabs example"
                 >
-                    <Tab label=" 4 Mar " {...a11yProps(0)} />
-                    <Tab label=" 5 Mar " {...a11yProps(1)} />
+                    <Tab label=" Junior (Individual) " {...a11yProps(0)} />
+                    <Tab label=" Female (Individual) (0-1) " {...a11yProps(1)} wrapped />
+                    <Tab label=" Female (Individual) (2-3) " {...a11yProps(2)} wrapped />
+                    <Tab label=" Male (Individual) (0-1) " {...a11yProps(3)} />
+                    <Tab label=" Male (Individual) (2-3) " {...a11yProps(4)} />
+                    <Tab label=" Female (Team) " {...a11yProps(5)} />
+                    <Tab label=" Male (Team) " {...a11yProps(6)} />
+                    <Tab label=" Open (Team) " {...a11yProps(7)} />
                 </Tabs>
             </AppBar>
             <SwipeableViews
@@ -83,21 +91,56 @@ export default function FullWidthTabs() {
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <div className='category-container'>
-                        <h3 className='title-category'>Female Category (Individual)</h3>
-                    </div>
-                    <IndividualTable />
-                    <div className='category-container pt-5'>
-                        <h3 className='title-category'>Male Category (Individual)</h3>
+                        <h3 className='title-category'>Junior (Individual)</h3>
                     </div>
                     <IndividualTable />
                 </TabPanel>
+
                 <TabPanel value={value} index={1} dir={theme.direction}>
                     <div className='category-container'>
-                        <h3 className='title-category'>Female Category (Team)</h3>
+                        <h3 className='title-category'>Female (Individual) (0-1 Dan)</h3>
                     </div>
                     <IndividualTable />
-                    <div className='category-container pt-5 '>
-                        <h3 className='title-category'>Female Category (Team)</h3>
+                </TabPanel>
+
+                <TabPanel value={value} index={2} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Female (Individual) (2-3 Dan)</h3>
+                    </div>
+                    <IndividualTable />
+                </TabPanel>
+
+                <TabPanel value={value} index={3} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Male (Individual) (0-1 Dan)</h3>
+                    </div>
+                    <IndividualTable />
+                </TabPanel>
+
+                <TabPanel value={value} index={4} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Male (Individual) (2-3 Dan)</h3>
+                    </div>
+                    <IndividualTable />
+                </TabPanel>
+
+                <TabPanel value={value} index={5} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Male (Team)</h3>
+                    </div>
+                    <IndividualTable />
+                </TabPanel>
+
+                <TabPanel value={value} index={6} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Open (Team)</h3>
+                    </div>
+                    <IndividualTable />
+                </TabPanel>
+
+                <TabPanel value={value} index={7} dir={theme.direction}>
+                    <div className='category-container'>
+                        <h3 className='title-category'>Female (Team)</h3>
                     </div>
                     <IndividualTable />
                 </TabPanel>
