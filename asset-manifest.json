@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.f5240ed6.css",
-    "main.js": "./static/js/main.77deed74.js",
+    "main.css": "./static/css/main.2ff16e0e.css",
+    "main.js": "./static/js/main.c065cebe.js",
     "static/js/787.5dc16573.chunk.js": "./static/js/787.5dc16573.chunk.js",
     "static/media/registration_form.png": "./static/media/registration_form.f9d6a4f66d071e665e9c.png",
     "static/media/hoa_sen_uni.jpg": "./static/media/hoa_sen_uni.c2fca79588466cc9269f.jpg",
@@ -15,12 +15,12 @@
     "static/media/bag.jpg": "./static/media/bag.43172359b60ef21d2be5.jpg",
     "static/media/shinai.jpg": "./static/media/shinai.bee7718e5ab468b3cf4d.jpg",
     "index.html": "./index.html",
-    "main.f5240ed6.css.map": "./static/css/main.f5240ed6.css.map",
-    "main.77deed74.js.map": "./static/js/main.77deed74.js.map",
+    "main.2ff16e0e.css.map": "./static/css/main.2ff16e0e.css.map",
+    "main.c065cebe.js.map": "./static/js/main.c065cebe.js.map",
     "787.5dc16573.chunk.js.map": "./static/js/787.5dc16573.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5240ed6.css",
-    "static/js/main.77deed74.js"
+    "static/css/main.2ff16e0e.css",
+    "static/js/main.c065cebe.js"
   ]
 }
