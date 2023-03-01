@@ -130,41 +130,7 @@ const rows = [
     createData('Match 4', 'Name1', 'Name2'),
 ];
 
-
-export default function IndividualTable() {
-    // const [isLoading, setIsLoading] = React.useState(true);
-    const [data, setData] = React.useState([]);
-
-    React.useEffect(() => {
-        const url = "https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/player";
-        // const url = "https://randomuser.me/api/?results=15";
-        fetch(url, {
-            method: 'GET',
-            headers: { 'content-type': 'application/json' },
-        })
-            .then(res => {
-
-                if (res.ok) {
-                    return res.json();
-                }
-                // console.log(res)
-            })
-            .then(result => {
-                console.log(result)
-                setData(result['results'])
-            })
-            .catch(error => (
-                console.log(error)
-            ));
-    }, []);
-
-    React.useEffect(() => {
-        // if (data.length !== 0) {
-        //     setIsLoading(false);
-        // }
-        // console.log(data);
-    }, [data]);
-
+export default function TeamMatch() {
     return (
         <TableContainer component={Paper}>
             <Table aria-label="collapsible table">

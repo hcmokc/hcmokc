@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 
 // Import Components
 import IndividualTable from '../IndividualTable';
+import TeamTable from '../TeamTable';
 
 // Import CSS
 import '../InfoTable/index.css';
@@ -69,10 +70,10 @@ export default function FullWidthTabs() {
                     onChange={handleChange}
                     indicatorColor="secondary"
                     textColor="inherit"
-                    variant="scorable"
+                    variant="scrollable"
                     scrollButtons="auto"
                     allowScrollButtonsMobile
-                    aria-label="full width scrollable auto tabs example"
+                    aria-label="scrollable auto tabs example"
                 >
                     <Tab label=" Junior (Individual) " {...a11yProps(0)} />
                     <Tab label=" Female (Individual) (0-1) " {...a11yProps(1)} wrapped />
@@ -128,21 +129,21 @@ export default function FullWidthTabs() {
                     <div className='category-container'>
                         <h3 className='title-category'>Male (Team)</h3>
                     </div>
-                    <IndividualTable />
+                    <TeamTable />
                 </TabPanel>
 
                 <TabPanel value={value} index={6} dir={theme.direction}>
                     <div className='category-container'>
                         <h3 className='title-category'>Open (Team)</h3>
                     </div>
-                    <IndividualTable />
+                    <TeamTable />
                 </TabPanel>
 
                 <TabPanel value={value} index={7} dir={theme.direction}>
                     <div className='category-container'>
                         <h3 className='title-category'>Female (Team)</h3>
                     </div>
-                    <IndividualTable />
+                    <TeamTable />
                 </TabPanel>
             </SwipeableViews>
         </Box>

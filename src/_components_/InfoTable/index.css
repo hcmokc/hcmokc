@@ -1,6 +1,10 @@
-.title-category{
+.title-category {
    text-align: center;
    font-weight: 600;
    text-transform: uppercase;
    color: red;
+}
+
+.MuiTabs-scrollButtons.Mui-disabled {
+   opacity: 0.3;
 }

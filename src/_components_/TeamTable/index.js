@@ -18,6 +18,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 // Import Components
 import MatchCollapseTable from '../../_components_/MatchCollapseTable'
+import TeamMatch from './teamMatch.js'
 
 function createData(name) {
     return {
@@ -77,7 +78,7 @@ function Row(props) {
                                         </TableRow>
                                     ))} */}
                                     <div className='pb-4'>
-                                        <MatchCollapseTable />
+                                        <TeamMatch />
                                     </div>
                                 </TableBody>
                             </Table>
@@ -91,6 +92,9 @@ function Row(props) {
 
 Row.propTypes = {
     row: PropTypes.shape({
+        // calories: PropTypes.number.isRequired,
+        // carbs: PropTypes.number.isRequired,
+        // fat: PropTypes.number.isRequired,
         history: PropTypes.arrayOf(
             PropTypes.shape({
                 amount: PropTypes.number.isRequired,
@@ -99,8 +103,8 @@ Row.propTypes = {
             }),
         ).isRequired,
         name: PropTypes.string.isRequired,
-        // price: PropTypes.number.isRequired,
-        // protein: PropTypes.number.isRequired,
+        price: PropTypes.number.isRequired,
+        protein: PropTypes.number.isRequired,
     }).isRequired,
 };
 
@@ -111,7 +115,7 @@ const rows = [
     createData('Group D'),
 ];
 
-export default function IndividualTable() {
+export default function TeamTable() {
     return (
         <TableContainer component={Paper}>
             <Table aria-label="collapsible table">

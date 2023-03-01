@@ -9,7 +9,7 @@ import HomeTemplate from "./_pages_/HomeTemplate";
 import MatchTemplate from "./_pages_/MatchTemplate";
 
 // Admin Template
-// import AdminTemplate from './_pages_/AdminTemplate';
+import AdminTemplate from './_pages_/AdminTemplete';
 
 // Page Not Found
 // import PageNotFound from './_pages_/PageNotFound';
@@ -23,6 +23,9 @@ export default class App extends Component {
 
         {/* Every Match Template*/}
         <Route path="/match-info" element={<MatchTemplate />}></Route>
+
+        {/* Admin Template*/}
+        <Route path="/admin-temp" element={<AdminTemplate/>}></Route>
 
         {/* Admin Template */}
         {/* <AdminProtectedRoute exact path="/admin" component={AdminTemplate} /> */}
