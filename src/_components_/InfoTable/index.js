@@ -62,6 +62,31 @@ export default function FullWidthTabs() {
         setValue(index);
     };
 
+    // const [isLoading, setIsLoading] = React.useState(true);
+    // const [data, setData] = React.useState([
+    // ]);
+
+    // React.useEffect(() => {
+    //     const url = "https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/junior-individual-match";
+    //     fetch(url, {
+    //         method: 'GET',
+    //         headers: { 'content-type': 'application/json' },
+    //     })
+    //         .then((res) => {
+    //             if (res.ok) {
+    //                 return res.json();
+    //             }
+    //         })
+    //         .then((result) => {
+    //             console.log(result)
+    //             setData({ ...result })
+    //         })
+    //         .then(setIsLoading(false))
+    //         .catch(error => (
+    //             console.log(error)
+    //         ));
+    // }, []);
+
     return (
         <Box sx={{ bgcolor: 'background.paper', width: 400 }}>
             <AppBar position="static">
@@ -93,8 +118,10 @@ export default function FullWidthTabs() {
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <div className='category-container'>
                         <h3 className='title-category'>Junior (Individual)</h3>
+                        {/* <h3 className='title-category'>{data[0]['name-player-1']}</h3> */}
                     </div>
                     <IndividualTable />
+                    {/* {console.log(data[0]['name-player-1'])} */}
                 </TabPanel>
 
                 <TabPanel value={value} index={1} dir={theme.direction}>

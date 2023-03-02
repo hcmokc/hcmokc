@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "https://hcmokc.github.io/hcmokc/",
+    baseURL: "https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/",
 })

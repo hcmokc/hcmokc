@@ -11,7 +11,7 @@ import "@popperjs/core/dist/umd/popper.min.js"
 import "bootstrap/dist/js/bootstrap.min.js";
 
 // React Router Dom
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 // Axios
 import axios from "axios";
@@ -20,10 +20,7 @@ import axios from "axios";
 // axios.defaults.baseURL = 'http://localhost:8080/';
 
 //Deploy Database
-// axios.defaults.baseURL = 'https://online-ordering-system-323618.as.r.appspot.com/';
-
-// HTTPS Scripts
-// "start": "HTTPS=true react-scripts start",
+axios.defaults.baseURL = 'https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

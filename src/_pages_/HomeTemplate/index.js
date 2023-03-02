@@ -91,6 +91,8 @@ export default class HomeTemplate extends Component {
                     </div>
                 </div>
 
+                <a href='https://docs.google.com/spreadsheets/d/10i-zHEF3G9coWMzHToCfElIegqa7woqXat8zEhq65yg/edit#gid=121932244'>https://docs.google.com/spreadsheets/d/10i-zHEF3G9coWMzHToCfElIegqa7woqXat8zEhq65yg/edit#gid=121932244</a>
+
                 {/* Registration Form  */}
                 {/* <RegistrationForm /> */}
 
@@ -108,7 +110,8 @@ export default class HomeTemplate extends Component {
                         <img className="schedule-img" src={schedule_2} alt="Schedule 2"></img>
                     </div>
                 </div>
-
+                
+        
 
                 {/* Score Board */}
                 {/* <ScoreBoard /> */}

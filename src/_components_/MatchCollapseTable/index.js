@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { data } from 'jquery';
 
 function createData(name, player1, player2) {
     return {
@@ -21,7 +22,6 @@ function createData(name, player1, player2) {
         player2,
         history: [
             {
-                name1: 'FE01-Sò',
                 ippon1_name1: 'X',
                 ippon2_name1: 'X',
                 ippon3_name1: 'X',
@@ -30,15 +30,21 @@ function createData(name, player1, player2) {
                 ippon2_name2: 'M',
                 ippon3_name2: 'X',
                 ippon4_name2: 'X',
-                name2: 'FE02-Bảo',
             },
         ],
     };
 }
 
 function Row(props) {
-    const { row } = props;
+    const { row, row_data } = props;
     const [open, setOpen] = React.useState(false);
+
+    // if (row_data != 0) {
+    //     console.log("row_data")
+    //     console.log(row_data[0])
+    // }
+
+    console.log()
 
     return (
         <React.Fragment>
@@ -53,11 +59,13 @@ function Row(props) {
                         {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                     </IconButton>
                 </TableCell>
-                <TableCell component="th" colSpan={2} scope="row" style={{ color: "white", fontWeight: 'bold' }}>
+                <TableCell component="th" colSpan={1} scope="row" style={{ color: "white", fontWeight: 'bold' }}>
                     {row.name}
+                    {/* {row_data.map} */}
                 </TableCell>
-                <TableCell align="right">{row.player1}</TableCell>
-                <TableCell align="right">{row.player2}</TableCell>
+
+                <TableCell colSpan={1} align="right"></TableCell>
+                <TableCell colSpan={1} align="right"></TableCell>
             </TableRow>
             <TableRow>
                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -66,20 +74,18 @@ function Row(props) {
                             <Table size="small" aria-label="purchases" className='border border-4'>
                                 <TableHead className='border border-4'>
                                     <TableRow >
-                                        <TableCell align="center" colSpan={6} className="bg-danger border border-4">Red</TableCell>
-                                        <TableCell align="center" colSpan={6} className="border border-4">White</TableCell>
+                                        <TableCell align="center" colSpan={4} className="bg-danger border border-4 text-white">Red</TableCell>
+                                        <TableCell align="center" colSpan={4} className="border border-4">White</TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell align="center" colSpan={2} className='border border-4'>Player</TableCell>
                                         <TableCell align="center" colSpan={4} className='border border-4'>Ippon -</TableCell>
                                         <TableCell align="center" colSpan={4} className='border border-4'>Ippon -</TableCell>
-                                        <TableCell align="center" colSpan={2} className='border border-4'>Player</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {row.history.map((historyRow) => (
                                         <TableRow key={historyRow.name1}>
-                                            <TableCell className='border border-4' component="th" colSpan={2} scope="row">{historyRow.name1}</TableCell>
+                                            {/* <TableCell className='border border-4' component="th" colSpan={2} scope="row">{historyRow.name1}</TableCell> */}
                                             <TableCell className='border border-4' align="right">{historyRow.ippon1_name1}</TableCell>
                                             <TableCell className='border border-4' align="right">{historyRow.ippon2_name1}</TableCell>
                                             <TableCell className='border border-4' align="right">{historyRow.ippon3_name1}</TableCell>
@@ -88,13 +94,14 @@ function Row(props) {
                                             <TableCell className='border border-4' align="right">{historyRow.ippon2_name2}</TableCell>
                                             <TableCell className='border border-4' align="right">{historyRow.ippon3_name2}</TableCell>
                                             <TableCell className='border border-4' align="right">{historyRow.ippon4_name2}</TableCell>
-                                            <TableCell className='border border-4' align="right">{historyRow.name2}</TableCell>
+                                            {/* <TableCell className='border border-4' align="right">{historyRow.name2}</TableCell> */}
                                         </TableRow>
                                     ))}
                                     <TableRow>
-                                        <TableCell colSpan={5} align="center" className='border border-4'>Result</TableCell>
-                                        <TableCell colSpan={6} align="center" className='border border-4'>White Win</TableCell>
+                                        <TableCell colSpan={3} align="center" className='border border-4'>Result</TableCell>
+                                        <TableCell colSpan={5} align="center" className='border border-4'>White Win</TableCell>
                                     </TableRow>
+
                                 </TableBody>
                             </Table>
                         </Box>
@@ -117,66 +124,84 @@ Row.propTypes = {
                 date: PropTypes.string.isRequired,
             }),
         ).isRequired,
-        name: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        protein: PropTypes.number.isRequired,
+        // name: PropTypes.string.isRequired,
+        // price: PropTypes.number.isRequired,
+        // protein: PropTypes.number.isRequired,
     }).isRequired,
 };
 
-const rows = [
-    createData('Match 1', 'Phan Gia Bao', 'Le Phuoc Thanh Luan'),
-    createData('Match 2', 'Name1', 'Name2'),
-    createData('Match 3', 'Name1', 'Name2'),
-    createData('Match 4', 'Name1', 'Name2'),
-];
-
-
 export default function IndividualTable() {
-    // const [isLoading, setIsLoading] = React.useState(true);
+    const [isLoading, setIsLoading] = React.useState(true);
     const [data, setData] = React.useState([]);
 
+    const rows = [
+        // // data.map(createData('Match ' + data.id)),
+        createData('Match 1', 'Name1', 'Name2'),
+        createData('Match 2', 'Name1', 'Name2'),
+        createData('Match 3', 'Name1', 'Name2'),
+        createData('Match 4', 'Name1', 'Name2'),
+    ];
+
+
+
     React.useEffect(() => {
-        const url = "https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/player";
-        // const url = "https://randomuser.me/api/?results=15";
+        const url = "https://63fef37cc5c800a72388710e.mockapi.io/hcmokc/junior-individual-match";
         fetch(url, {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
         })
-            .then(res => {
-
+            .then((res) => {
                 if (res.ok) {
                     return res.json();
                 }
-                // console.log(res)
             })
-            .then(result => {
-                console.log(result)
-                setData(result['results'])
+            .then((result) => {
+                setData({ ...result })
             })
+            .then(setIsLoading(false))
             .catch(error => (
                 console.log(error)
             ));
     }, []);
 
-    React.useEffect(() => {
-        // if (data.length !== 0) {
-        //     setIsLoading(false);
-        // }
-        // console.log(data);
-    }, [data]);
+    // data.length = 0 ? console.log("if") : console.log("Fuck Yeah")
+    // if (data.length == 0) {
+    //     console.log(data)
+    // } else {
+    //     console.log(data[0]['name-player-1'])
+    // }
+
+    // if (data.length != 0) {
+    //     // console.log(data[0]['name-player-1'])
+    //     console.log("under")
+    //     // console.log(data[0])
+    //     for (var i = 0; i < 10; i++) {
+    //         console.log(data[i]['id'])
+    //     }
+    // }
+
+    if (data.length != 0) {
+        data.map((item) => {
+            console.log(item)
+        })
+    }
 
     return (
         <TableContainer component={Paper}>
             <Table aria-label="collapsible table">
                 <TableHead>
                     <TableRow>
-                        {/* <TableCell>Dessert (100g serving)</TableCell>*/}
+                        {/* <TableCell>{Object.keys(data).map(item => {<p key={data[item][0]}></p>})}</TableCell> */}
+                        {/* {data.length != 0 ? console.log(data[0]['name-player-1']) : console.log('oh fuck')} */}
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
-                        <Row key={row.name} row={row} />
+                        <Row key={row.name} row={row} row_data={data} />
                     ))}
+                    {/* {data.map((item) => (
+                        <Row key={data.name} row={row} row_data={data} />
+                    ))} */}
                 </TableBody>
             </Table>
         </TableContainer>
