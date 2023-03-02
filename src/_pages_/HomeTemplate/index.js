@@ -93,6 +93,8 @@ export default class HomeTemplate extends Component {
 
                 <a href='https://docs.google.com/spreadsheets/d/1obonYzx3n8iHWQzs3px3wBLQIBbCR0YX/edit#gid=228548824'>https://docs.google.com/spreadsheets/d/1obonYzx3n8iHWQzs3px3wBLQIBbCR0YX/edit#gid=228548824</a>
 
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTzTRwtZe8Aydj33CaMyf6AexbXDrhEmHD5ceseVzyvp5pucWUeFbOrRpwN9NnBA15K5XSsq0Br8v8s/pubhtml?widget=true&amp;headers=false"></iframe>
+
                 {/* Registration Form  */}
                 {/* <RegistrationForm /> */}
 
