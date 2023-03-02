@@ -91,7 +91,7 @@ export default class HomeTemplate extends Component {
                     </div>
                 </div>
 
-                <a href='https://docs.google.com/spreadsheets/d/10i-zHEF3G9coWMzHToCfElIegqa7woqXat8zEhq65yg/edit#gid=121932244'>https://docs.google.com/spreadsheets/d/10i-zHEF3G9coWMzHToCfElIegqa7woqXat8zEhq65yg/edit#gid=121932244</a>
+                <a href='https://docs.google.com/spreadsheets/d/1obonYzx3n8iHWQzs3px3wBLQIBbCR0YX/edit#gid=228548824'>https://docs.google.com/spreadsheets/d/1obonYzx3n8iHWQzs3px3wBLQIBbCR0YX/edit#gid=228548824</a>
 
                 {/* Registration Form  */}
                 {/* <RegistrationForm /> */}
