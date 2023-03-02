@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.2ff16e0e.css",
-    "main.js": "./static/js/main.030224e8.js",
+    "main.js": "./static/js/main.268634d7.js",
     "static/js/787.5dc16573.chunk.js": "./static/js/787.5dc16573.chunk.js",
     "static/media/registration_form.png": "./static/media/registration_form.f9d6a4f66d071e665e9c.png",
     "static/media/hoa_sen_uni.jpg": "./static/media/hoa_sen_uni.c2fca79588466cc9269f.jpg",
@@ -16,11 +16,11 @@
     "static/media/shinai.jpg": "./static/media/shinai.bee7718e5ab468b3cf4d.jpg",
     "index.html": "./index.html",
     "main.2ff16e0e.css.map": "./static/css/main.2ff16e0e.css.map",
-    "main.030224e8.js.map": "./static/js/main.030224e8.js.map",
+    "main.268634d7.js.map": "./static/js/main.268634d7.js.map",
     "787.5dc16573.chunk.js.map": "./static/js/787.5dc16573.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ff16e0e.css",
-    "static/js/main.030224e8.js"
+    "static/js/main.268634d7.js"
   ]
 }
